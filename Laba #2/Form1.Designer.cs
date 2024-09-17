@@ -154,7 +154,7 @@
             // 
             // button_left
             // 
-            this.button_left.Location = new System.Drawing.Point(70, 309);
+            this.button_left.Location = new System.Drawing.Point(53, 309);
             this.button_left.Name = "button_left";
             this.button_left.Size = new System.Drawing.Size(75, 23);
             this.button_left.TabIndex = 16;
@@ -197,6 +197,11 @@
             // input_key_NeOptim
             // 
             this.input_key_NeOptim.Location = new System.Drawing.Point(88, 59);
+            this.input_key_NeOptim.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.input_key_NeOptim.Name = "input_key_NeOptim";
             this.input_key_NeOptim.Size = new System.Drawing.Size(120, 20);
             this.input_key_NeOptim.TabIndex = 7;

@@ -54,7 +54,7 @@
             this.textBox_time_sorted = new System.Windows.Forms.TextBox();
             this.textBox_index_unsorted = new System.Windows.Forms.TextBox();
             this.textBox_time_unsorted = new System.Windows.Forms.TextBox();
-            this.input_key_unsorted = new System.Windows.Forms.NumericUpDown();
+            this.input_key_sorted = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_key_NeOptim)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.input_key_unsorted)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_key_sorted)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,7 +198,7 @@
             // 
             this.input_key_NeOptim.Location = new System.Drawing.Point(88, 59);
             this.input_key_NeOptim.Maximum = new decimal(new int[] {
-            1000000,
+            100000000,
             0,
             0,
             0});
@@ -284,7 +284,7 @@
             this.panel5.Controls.Add(this.textBox_time_sorted);
             this.panel5.Controls.Add(this.textBox_index_unsorted);
             this.panel5.Controls.Add(this.textBox_time_unsorted);
-            this.panel5.Controls.Add(this.input_key_unsorted);
+            this.panel5.Controls.Add(this.input_key_sorted);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.label15);
@@ -305,6 +305,7 @@
             this.button_right.TabIndex = 17;
             this.button_right.Text = "Find";
             this.button_right.UseVisualStyleBackColor = true;
+            this.button_right.Click += new System.EventHandler(this.button_right_Click);
             // 
             // textBox_index_sorted
             // 
@@ -338,12 +339,17 @@
             this.textBox_time_unsorted.Size = new System.Drawing.Size(120, 20);
             this.textBox_time_unsorted.TabIndex = 14;
             // 
-            // input_key_unsorted
+            // input_key_sorted
             // 
-            this.input_key_unsorted.Location = new System.Drawing.Point(79, 59);
-            this.input_key_unsorted.Name = "input_key_unsorted";
-            this.input_key_unsorted.Size = new System.Drawing.Size(120, 20);
-            this.input_key_unsorted.TabIndex = 9;
+            this.input_key_sorted.Location = new System.Drawing.Point(79, 59);
+            this.input_key_sorted.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.input_key_sorted.Name = "input_key_sorted";
+            this.input_key_sorted.Size = new System.Drawing.Size(120, 20);
+            this.input_key_sorted.TabIndex = 9;
             // 
             // label17
             // 
@@ -461,7 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.input_key_NeOptim)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.input_key_unsorted)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_key_sorted)).EndInit();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -492,7 +498,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown input_key_unsorted;
+        private System.Windows.Forms.NumericUpDown input_key_sorted;
         private System.Windows.Forms.Button button_exit;
         private System.Windows.Forms.TextBox textBox_index_NeOptim;
         private System.Windows.Forms.TextBox textBox_time_NeOptim;

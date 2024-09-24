@@ -198,7 +198,7 @@
             // 
             this.input_key_NeOptim.Location = new System.Drawing.Point(88, 59);
             this.input_key_NeOptim.Maximum = new decimal(new int[] {
-            100000000,
+            200000000,
             0,
             0,
             0});
@@ -343,7 +343,7 @@
             // 
             this.input_key_sorted.Location = new System.Drawing.Point(79, 59);
             this.input_key_sorted.Maximum = new decimal(new int[] {
-            100000000,
+            200000000,
             0,
             0,
             0});

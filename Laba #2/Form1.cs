@@ -13,7 +13,7 @@ namespace Laba__2
 {
     public partial class Form1 : Form
     {
-        const int N = 100;
+        const int N = 200000000;
         int[] unsortedArray = new int[N + 1];
         int[] sortedArray = new int[N + 1];
 
@@ -25,20 +25,22 @@ namespace Laba__2
         private void Form1_Load(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            for (int i = 0; i < N; i++) sortedArray[i] = unsortedArray[i] = rnd.Next(1, N);
+            for (int i = 0; i < N; i++) sortedArray[i] = unsortedArray[i] = rnd.Next(0, N);
+            Array.Sort(sortedArray);
 
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < N - 1; j++) 
-                { 
-                    if (sortedArray[j] > sortedArray[j + 1])
-                    {
-                        int temp = sortedArray[j];
-                        sortedArray[j] = sortedArray[j + 1];
-                        sortedArray[j + 1] = temp;
-                    }
-                }
-            }
+            //Медленная сортировка пузырьком
+            //for (int i = 0; i < N; i++)
+            //{
+            //    for (int j = 0; j < N - 1; j++) 
+            //    { 
+            //        if (sortedArray[j] > sortedArray[j + 1])
+            //        {
+            //            int temp = sortedArray[j];
+            //            sortedArray[j] = sortedArray[j + 1];
+            //            sortedArray[j + 1] = temp;
+            //        }
+            //    }
+            //}
         }
 
         private void button_left_Click(object sender, EventArgs e)
@@ -127,7 +129,7 @@ namespace Laba__2
                     indexSortedArray++;
                 }
 
-                if (sortedArray[indexSortedArray] == key)
+                if (sortedArray[indexSortedArray] == key && indexSortedArray != N)
                 {
                     textBox_index_sorted.Text = indexSortedArray.ToString();
                 }
